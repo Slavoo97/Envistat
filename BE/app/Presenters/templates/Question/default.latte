@@ -1,0 +1,279 @@
+{if $eventKey}
+{var $hasKey = $eventKey}
+{else}
+{var $hasKey = null}
+{/if}
+{block #content}
+    {if $introText}
+    <!-- Modal -->
+    <div class="modal bd-example-modal-lg" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header" style="border-bottom: none">
+                    {if $hasKey}
+                        <a class="navbar-brand d-flex align-items-end" n:href="Homepage:default $hasKey">
+                            <span>VOĽBA2050.KOŠICE</span>
+                        </a>
+                    {else}
+                        <a class="navbar-brand d-flex align-items-end" n:href="Homepage:default">
+                            <span>VOĽBA2050.KOŠICE</span>
+                        </a>
+                    {/if}
+                </div>
+                <div class="modal-body">
+                    <div style="display: flex;align-items: center;justify-content: center; margin-bottom: 15px">
+                        <img src="/img/{$introImg}" alt="intro_image" style="max-width: 450px;">
+                    </div>
+                    <div class="intro-text">
+                        {$introText|noescape}
+                    <button type="button" class="btn" data-dismiss="modal" aria-label="Close" style="background-color: transparent;border: 1px solid #000000;border-radius: 15px;padding:10px 20px ">
+                        <span>Prejsť na otázku</span>
+                    </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {/if}
+    <div class="wrapper" id="wrp-hide" style="display: none">
+        <h1 class="year">
+            {$question->getYear()}
+        </h1>
+        <h4 class="question-header">
+            {$question->getQuestionName()}
+        </h4>
+        <p class="question-text">
+            {$question->getQuestionText()}
+        </p>
+        <div class="answer-wrapper">
+            {foreach $answers as $answer}
+            <a n:href="answer! $answer->getId(), $eventKey" class="answer-link">
+                <div class="answer">
+                    <p class="a-marker">{$answer->getMarker()}</p>
+                    <p style="margin: 0;">{$answer->getAnswerText()}</p>
+                </div>
+            </a>
+            {/foreach}
+        </div>
+    </div>
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <ul class="timeline" id="timeline">
+        {foreach $years as $year}
+            <li class="li {if $year <= $question->getYear()} complete {/if}">
+                <div class="status">
+                    <h4>{$year}</h4>
+                </div>
+            </li>
+        {/foreach}
+    </ul>
+    <style>
+
+        .a-marker{
+            font-family: 'Fact-black', sans-serif;
+            font-size: 50px;
+            margin: 0 20px 0 0;
+        }
+        .year{
+            font-family: 'Fact-black', sans-serif;
+            font-size: 4em;
+        }
+
+        .question-header{
+
+        }
+        .answer-wrapper{
+            margin-top: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .answer-link{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .answer{
+            width: 1000px;
+            border: 1px solid #000000;
+            border-radius: 15px;
+            margin: 10px 10px;
+            padding: 15px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: flex-start;
+        }
+
+        .answer:hover{
+            border: 2px solid #000000;
+            transition: 0.3s;
+        }
+
+        #wrp-hide{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .start-img img{
+            max-width: 400px;
+        }
+        .modal {
+            padding: 0 !important; // override inline padding-right added from js
+        }
+        .modal .modal-dialog {
+            width: 100%;
+            max-width: none;
+            height: 100%;
+            margin: 0;
+        }
+        .modal .modal-content {
+            height: 100%;
+            border: 0;
+            border-radius: 0;
+        }
+        .modal .modal-body {
+            overflow-y: auto;
+        }
+        .intro-text{
+            margin: 0px auto;
+            margin-top: 20px;
+            max-width: 900px;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+        .question-text{
+            max-width: 900px;
+            text-align: center;
+        }
+
+        /*graph start*/
+
+        .timeline {
+            margin-top: 40px;
+            list-style-type: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: fixed;
+            left: 48.5%;
+            transform: translateX(-50%);
+            bottom: 1px;
+            z-index: 9999;
+        }
+
+        .li {
+            transition: all 200ms ease-in;
+        }
+
+        .status {
+            padding: 20px 20px 0px;
+            display: flex;
+            justify-content: center;
+            border-top: 2px solid #D6DCE0;
+            position: relative;
+            transition: all 200ms ease-in;
+        }
+
+        .status h4 {
+            font-weight: 600;
+        }
+
+        .status:before {
+            content: '';
+            width: 15px;
+            height: 15px;
+            background-color: white;
+            border-radius: 25px;
+            border: 1px solid #ddd;
+            position: absolute;
+            top: -9px;
+            left: 42%;
+            transition: all 200ms ease-in;
+        }
+
+        .li.complete .status {
+            border-top: 2px solid #000000;
+        }
+
+        .li.complete .status:before {
+            background-color: #000000;
+            border: none;
+            transition: all 200ms ease-in;
+        }
+
+        .li.complete .status h4 {
+            color: #000000;
+        }
+
+        @media (min-device-width: 320px) and (max-device-width: 700px) {
+            .timeline {
+                list-style-type: none;
+                display: block;
+            }
+            .li {
+                transition: all 200ms ease-in;
+                display: flex;
+                width: inherit;
+            }
+            .timestamp {
+                width: 100px;
+            }
+            .status:before {
+                left: -8%;
+                top: 30%;
+                transition: all 200ms ease-in; } }
+
+        /*graph end*/
+
+    </style>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    {if $question->getNumber() != 1}
+        <script type="text/javascript">
+            $(document).ready(function() {
+                setTimeout(function() {
+                    $('#wrp-hide').show();
+                }, 500);
+            });
+        </script>
+    {else}
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $('#wrp-hide').show();
+            });
+        </script>
+    {/if}
+    <script type="text/javascript">
+        $(window).on('load', function() { // Po načítaní stránky
+            $('#exampleModalCenter').modal('show'); // Zobrazí modálne okno
+        });
+
+        var timer = null;
+
+        function resetTimer() {
+            clearTimeout(timer);
+            timer = setTimeout(function() {
+                window.location.href =
+                {if $hasKey}
+                    {link Homepage:default $hasKey}
+                {else}
+                    {link Homepage:default}
+                {/if}
+            }, 60000); // 60,000 milisekúnd = 1 minúta
+        }
+
+        $(document).on('mousemove keydown', function() {
+            resetTimer();
+        });
+
+    </script>
+{/block}

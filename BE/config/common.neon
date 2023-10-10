@@ -1,0 +1,36 @@
+parameters:
+
+
+application:
+	errorPresenter: Error
+	mapping:
+		*: App\*Module\Presenters\*Presenter
+
+
+session:
+	expiration: 1 days
+di:
+	export:
+		parameters: no
+		tags: no
+includes:
+    - doctrine.neon
+extensions:
+    console: Contributte\Console\DI\ConsoleExtension(%consoleMode%)
+services:
+    - App\Router\RouterFactory::createRouter
+    QuestionRepository:
+        type: App\Model\Services\QuestionRepository
+        factory: @Doctrine\ORM\EntityManagerInterface::getRepository('App\Model\Entity\Question')
+    AnswerRepository:
+        type: App\Model\Services\AnswerRepository
+        factory: @Doctrine\ORM\EntityManagerInterface::getRepository('App\Model\Entity\Answer')
+    RatingRepository:
+        type: App\Model\Services\RatingRepository
+        factory: @Doctrine\ORM\EntityManagerInterface::getRepository('App\Model\Entity\Rating')
+    AnswerQuestionRepository:
+        type: App\Model\Services\AnswerQuestionRepository
+        factory: @Doctrine\ORM\EntityManagerInterface::getRepository('App\Model\Entity\AnswerQuestion')
+    SessionRepository:
+        type: App\Model\Services\SessionRepository
+        factory: @Doctrine\ORM\EntityManagerInterface::getRepository('App\Model\Entity\Session')
