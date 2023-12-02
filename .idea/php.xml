@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="MessDetectorOptionsConfiguration">
+    <option name="transferred" value="true" />
+  </component>
+  <component name="PHPCSFixerOptionsConfiguration">
+    <option name="transferred" value="true" />
+  </component>
+  <component name="PHPCodeSnifferOptionsConfiguration">
+    <option name="highlightLevel" value="WARNING" />
+    <option name="transferred" value="true" />
+  </component>
+  <component name="PhpCodeSniffer">
+    <phpcs_settings>
+      <PhpCSConfiguration beautifier_path="$PROJECT_DIR$/BE/vendor/bin/phpcbf" tool_path="$PROJECT_DIR$/BE/vendor/bin/phpcs" />
+    </phpcs_settings>
+  </component>
+  <component name="PhpIncludePathManager">
+    <include_path>
+      <path value="$PROJECT_DIR$/BE/vendor/composer" />
+      <path value="$PROJECT_DIR$/BE/vendor/psr/cache" />
+      <path value="$PROJECT_DIR$/BE/vendor/psr/container" />
+      <path value="$PROJECT_DIR$/BE/vendor/psr/log" />
+      <path value="$PROJECT_DIR$/BE/vendor/latte/latte" />
+      <path value="$PROJECT_DIR$/BE/vendor/nette/di" />
+      <path value="$PROJECT_DIR$/BE/vendor/nette/bootstrap" />
+      <path value="$PROJECT_DIR$/BE/vendor/nette/security" />
+      <path value="$PROJECT_DIR$/BE/vendor/nette/php-generator" />
+      <path value="$PROJECT_DIR$/BE/vendor/nette/component-model" />
+      <path value="$PROJECT_DIR$/BE/vendor/nette/utils" />
+      <path value="$PROJECT_DIR$/BE/vendor/nette/robot-loader" />
+      <path value="$PROJECT_DIR$/BE/vendor/nette/schema" />
+      <path value="$PROJECT_DIR$/BE/vendor/nette/http" />
+      <path value="$PROJECT_DIR$/BE/vendor/nette/finder" />
+      <path value="$PROJECT_DIR$/BE/vendor/nette/neon" />
+      <path value="$PROJECT_DIR$/BE/vendor/nette/tester" />
+      <path value="$PROJECT_DIR$/BE/vendor/nette/application" />
+      <path value="$PROJECT_DIR$/BE/vendor/nette/routing" />
+      <path value="$PROJECT_DIR$/BE/vendor/nette/caching" />
+      <path value="$PROJECT_DIR$/BE/vendor/tracy/tracy" />
+      <path value="$PROJECT_DIR$/BE/vendor/ninjify/coding-standard" />
+      <path value="$PROJECT_DIR$/BE/vendor/ninjify/qa" />
+      <path value="$PROJECT_DIR$/BE/vendor/ninjify/nunjuck" />
+      <path value="$PROJECT_DIR$/BE/vendor/phpstan/phpstan" />
+      <path value="$PROJECT_DIR$/BE/vendor/phpstan/phpstan-deprecation-rules" />
+      <path value="$PROJECT_DIR$/BE/vendor/phpstan/phpstan-nette" />
+      <path value="$PROJECT_DIR$/BE/vendor/phpstan/phpstan-strict-rules" />
+      <path value="$PROJECT_DIR$/BE/vendor/phpstan/phpdoc-parser" />
+      <path value="$PROJECT_DIR$/BE/vendor/phpstan/phpstan-dibi" />
+      <path value="$PROJECT_DIR$/BE/vendor/symfony/polyfill-php80" />
+      <path value="$PROJECT_DIR$/BE/vendor/symfony/polyfill-ctype" />
+      <path value="$PROJECT_DIR$/BE/vendor/symfony/polyfill-php72" />
+      <path value="$PROJECT_DIR$/BE/vendor/symfony/polyfill-intl-normalizer" />
+      <path value="$PROJECT_DIR$/BE/vendor/symfony/string" />
+      <path value="$PROJECT_DIR$/BE/vendor/symfony/deprecation-contracts" />
+      <path value="$PROJECT_DIR$/BE/vendor/symfony/service-contracts" />
+      <path value="$PROJECT_DIR$/BE/vendor/symfony/console" />
+      <path value="$PROJECT_DIR$/BE/vendor/symfony/polyfill-mbstring" />
+      <path value="$PROJECT_DIR$/BE/vendor/symfony/polyfill-intl-grapheme" />
+      <path value="$PROJECT_DIR$/BE/vendor/doctrine/cache" />
+      <path value="$PROJECT_DIR$/BE/vendor/doctrine/lexer" />
+      <path value="$PROJECT_DIR$/BE/vendor/doctrine/dbal" />
+      <path value="$PROJECT_DIR$/BE/vendor/doctrine/inflector" />
+      <path value="$PROJECT_DIR$/BE/vendor/doctrine/annotations" />
+      <path value="$PROJECT_DIR$/BE/vendor/doctrine/common" />
+      <path value="$PROJECT_DIR$/BE/vendor/doctrine/persistence" />
+      <path value="$PROJECT_DIR$/BE/vendor/doctrine/instantiator" />
+      <path value="$PROJECT_DIR$/BE/vendor/doctrine/orm" />
+      <path value="$PROJECT_DIR$/BE/vendor/doctrine/event-manager" />
+      <path value="$PROJECT_DIR$/BE/vendor/doctrine/collections" />
+      <path value="$PROJECT_DIR$/BE/vendor/doctrine/deprecations" />
+      <path value="$PROJECT_DIR$/BE/vendor/nettrine/cache" />
+      <path value="$PROJECT_DIR$/BE/vendor/nettrine/dbal" />
+      <path value="$PROJECT_DIR$/BE/vendor/nettrine/annotations" />
+      <path value="$PROJECT_DIR$/BE/vendor/nettrine/orm" />
+      <path value="$PROJECT_DIR$/BE/vendor/slevomat/coding-standard" />
+      <path value="$PROJECT_DIR$/BE/vendor/squizlabs/php_codesniffer" />
+      <path value="$PROJECT_DIR$/BE/vendor/contributte/di" />
+      <path value="$PROJECT_DIR$/BE/vendor/contributte/bootstrap" />
+      <path value="$PROJECT_DIR$/BE/vendor/contributte/tracy" />
+      <path value="$PROJECT_DIR$/BE/vendor/contributte/cache" />
+      <path value="$PROJECT_DIR$/BE/vendor/contributte/security" />
+      <path value="$PROJECT_DIR$/BE/vendor/contributte/code-rules" />
+      <path value="$PROJECT_DIR$/BE/vendor/contributte/utils" />
+      <path value="$PROJECT_DIR$/BE/vendor/contributte/api-router" />
+      <path value="$PROJECT_DIR$/BE/vendor/contributte/http" />
+      <path value="$PROJECT_DIR$/BE/vendor/contributte/dev" />
+      <path value="$PROJECT_DIR$/BE/vendor/contributte/application" />
+      <path value="$PROJECT_DIR$/BE/vendor/contributte/console" />
+      <path value="$PROJECT_DIR$/BE/vendor/dealerdirect/phpcodesniffer-composer-installer" />
+      <path value="$PROJECT_DIR$/BE/vendor/php-parallel-lint/php-parallel-lint" />
+      <path value="$PROJECT_DIR$/vendor/nettrine/orm" />
+      <path value="$PROJECT_DIR$/vendor/nettrine/cache" />
+      <path value="$PROJECT_DIR$/vendor/nettrine/annotations" />
+      <path value="$PROJECT_DIR$/vendor/phpstan/phpdoc-parser" />
+      <path value="$PROJECT_DIR$/vendor/phpstan/phpstan-dibi" />
+      <path value="$PROJECT_DIR$/vendor/phpstan/phpstan-deprecation-rules" />
+      <path value="$PROJECT_DIR$/vendor/phpstan/phpstan-strict-rules" />
+      <path value="$PROJECT_DIR$/vendor/phpstan/phpstan-nette" />
+      <path value="$PROJECT_DIR$/vendor/phpstan/phpstan" />
+      <path value="$PROJECT_DIR$/vendor/nette/neon" />
+      <path value="$PROJECT_DIR$/vendor/nette/di" />
+      <path value="$PROJECT_DIR$/vendor/nette/finder" />
+      <path value="$PROJECT_DIR$/vendor/nette/bootstrap" />
+      <path value="$PROJECT_DIR$/vendor/nette/caching" />
+      <path value="$PROJECT_DIR$/vendor/nette/routing" />
+      <path value="$PROJECT_DIR$/vendor/nette/component-model" />
+      <path value="$PROJECT_DIR$/vendor/nette/php-generator" />
+      <path value="$PROJECT_DIR$/vendor/nette/tester" />
+      <path value="$PROJECT_DIR$/vendor/nette/schema" />
+      <path value="$PROJECT_DIR$/vendor/nette/security" />
+      <path value="$PROJECT_DIR$/vendor/nette/http" />
+      <path value="$PROJECT_DIR$/vendor/nette/robot-loader" />
+      <path value="$PROJECT_DIR$/vendor/nette/utils" />
+      <path value="$PROJECT_DIR$/vendor/nette/application" />
+      <path value="$PROJECT_DIR$/vendor/composer" />
+      <path value="$PROJECT_DIR$/vendor/symfony/console" />
+      <path value="$PROJECT_DIR$/vendor/contributte/code-rules" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-ctype" />
+      <path value="$PROJECT_DIR$/vendor/contributte/tracy" />
+      <path value="$PROJECT_DIR$/vendor/symfony/deprecation-contracts" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-mbstring" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php72" />
+      <path value="$PROJECT_DIR$/vendor/contributte/di" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-grapheme" />
+      <path value="$PROJECT_DIR$/vendor/contributte/application" />
+      <path value="$PROJECT_DIR$/vendor/symfony/service-contracts" />
+      <path value="$PROJECT_DIR$/vendor/contributte/console" />
+      <path value="$PROJECT_DIR$/vendor/symfony/string" />
+      <path value="$PROJECT_DIR$/vendor/contributte/utils" />
+      <path value="$PROJECT_DIR$/vendor/dealerdirect/phpcodesniffer-composer-installer" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/annotations" />
+      <path value="$PROJECT_DIR$/vendor/contributte/http" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/event-manager" />
+      <path value="$PROJECT_DIR$/vendor/contributte/security" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-normalizer" />
+      <path value="$PROJECT_DIR$/vendor/contributte/api-router" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php80" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/lexer" />
+      <path value="$PROJECT_DIR$/vendor/contributte/bootstrap" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/instantiator" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/inflector" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/collections" />
+      <path value="$PROJECT_DIR$/vendor/contributte/dev" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/persistence" />
+      <path value="$PROJECT_DIR$/vendor/contributte/cache" />
+      <path value="$PROJECT_DIR$/vendor/psr/cache" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/orm" />
+      <path value="$PROJECT_DIR$/vendor/psr/log" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/common" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/dbal" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/cache" />
+      <path value="$PROJECT_DIR$/vendor/php-parallel-lint/php-parallel-lint" />
+      <path value="$PROJECT_DIR$/vendor/psr/container" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/deprecations" />
+      <path value="$PROJECT_DIR$/vendor/squizlabs/php_codesniffer" />
+      <path value="$PROJECT_DIR$/vendor/ninjify/coding-standard" />
+      <path value="$PROJECT_DIR$/vendor/latte/latte" />
+      <path value="$PROJECT_DIR$/vendor/slevomat/coding-standard" />
+      <path value="$PROJECT_DIR$/vendor/ninjify/nunjuck" />
+      <path value="$PROJECT_DIR$/vendor/ninjify/qa" />
+      <path value="$PROJECT_DIR$/vendor/tracy/tracy" />
+      <path value="$PROJECT_DIR$/vendor/nettrine/dbal" />
+      <path value="$PROJECT_DIR$/vendor/nette/mail" />
+      <path value="$PROJECT_DIR$/vendor/contributte/api-docu" />
+      <path value="$PROJECT_DIR$/vendor/phpmailer/phpmailer" />
+    </include_path>
+  </component>
+  <component name="PhpProjectSharedConfiguration" php_language_level="8.0" />
+  <component name="PhpStan">
+    <PhpStan_settings>
+      <PhpStanConfiguration tool_path="$PROJECT_DIR$/BE/vendor/bin/phpstan" />
+    </PhpStan_settings>
+  </component>
+  <component name="PhpStanOptionsConfiguration">
+    <option name="transferred" value="true" />
+  </component>
+  <component name="PhpUnit">
+    <phpunit_settings>
+      <PhpUnitSettings custom_loader_path="$PROJECT_DIR$/BE/vendor/autoload.php" />
+    </phpunit_settings>
+  </component>
+  <component name="PsalmOptionsConfiguration">
+    <option name="transferred" value="true" />
+  </component>
+</project>

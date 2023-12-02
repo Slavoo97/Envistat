@@ -1,0 +1,41 @@
+extensions:
+    apiRouter: Contributte\ApiRouter\DI\ApiRouterExtension
+    console: Contributte\Console\DI\ConsoleExtension(%consoleMode%)
+    apiDocu: Contributte\ApiDocu\DI\ApiDocuExtension
+
+
+apiDocu:
+	apiDir: "%appDir%/../www/apiDocs"
+
+parameters:
+
+
+application:
+	errorPresenter: Error
+	scanDirs: false
+	mapping:
+		*: App\Controllers\*Controller
+
+includes:
+    - nettrine.neon
+
+session:
+	expiration: 14 days
+
+services:
+	- App\Http\ApiResponseFormatter
+	- App\Routing\RouterFactory
+
+	router: @App\Routing\RouterFactory::create
+
+	# Api endpoints
+	#
+	- App\Controllers\WeatherPostController
+	- App\Controllers\GetLastTemperatureController
+
+	WeatherRepository:
+	    type: App\Model\Services\WeatherRepository
+	    factory: @Doctrine\ORM\EntityManagerInterface::getRepository('App\Model\Entity\Weather')
+#	commands.foo:
+#	    class: App\Command\ScrapPlateBrand
+#	    tags: [console.command: app:scrap:plate:brand]
