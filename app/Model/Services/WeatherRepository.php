@@ -61,9 +61,9 @@ class WeatherRepository extends EntityRepository {
         return $this->findBy($criteria, $orderBy, $limit, $offset);
     }
 
-    public function findOneWeatherBy(array $criteria = array())
+    public function findOneWeatherBy(array $criteria = array(), array $orderBy = array())
     {
-        return $this->findOneBy($criteria);
+        return $this->findOneBy($criteria, $orderBy);
     }
 
 	/**

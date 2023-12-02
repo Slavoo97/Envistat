@@ -32,6 +32,8 @@ services:
 	#
 	- App\Controllers\WeatherPostController
 	- App\Controllers\GetLastTemperatureController
+	- App\Controllers\GetActualTemperatureController
+	- App\Controllers\GetActualHumidityController
 
 	WeatherRepository:
 	    type: App\Model\Services\WeatherRepository
