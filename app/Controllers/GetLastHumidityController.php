@@ -18,15 +18,15 @@ use Tracy\Debugger;
  * API for logging users in
  *
  * @ApiRoute(
- * 	"/api/get_last_temperature",
+ * 	"/api/get_last_humidity",
  *
  * 	methods={
  * 		"GET"="run"
  * 	},
- *  presenter="GetLastTemperature"
+ *  presenter="GetLastHumidity"
  * )
  */
-final class GetLastTemperatureController extends AbstractController
+final class GetLastHumidityController extends AbstractController
 {
 
     /** @var WeatherRepository @inject */
@@ -38,6 +38,7 @@ final class GetLastTemperatureController extends AbstractController
 
 			$result = [];
 
+            // Inicializujeme dátumy pre začiatok a koniec minulého týždňa
             $endDate = new DateTime('now');
             $startDate = clone $endDate;
             $startDate->modify('-1 week');
@@ -50,7 +51,7 @@ final class GetLastTemperatureController extends AbstractController
                     $result[$dateKey] = ['totalTemperature' => 0, 'count' => 0];
                 }
 
-                $result[$dateKey]['totalTemperature'] += $entry->getTemperature();
+                $result[$dateKey]['totalTemperature'] += $entry->getHumidity();
                 $result[$dateKey]['count']++;
             }
 
@@ -59,7 +60,7 @@ final class GetLastTemperatureController extends AbstractController
             foreach ($result as $date => $values) {
                 $averageTemperature = $values['totalTemperature'] / $values['count'];
 
-                $finalResult[] = ['date' => $date, 'averageTemperature' => round($averageTemperature, 1)];
+                $finalResult[] = ['date' => $date, 'averageHumidity' => round($averageTemperature, 1)];
             }
 
 

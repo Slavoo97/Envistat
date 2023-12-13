@@ -32,6 +32,7 @@ services:
 	#
 	- App\Controllers\WeatherPostController
 	- App\Controllers\GetLastTemperatureController
+	- App\Controllers\GetLastHumidityController
 	- App\Controllers\GetActualTemperatureController
 	- App\Controllers\GetActualHumidityController
 

@@ -86,4 +86,20 @@ class WeatherRepository extends EntityRepository {
         return $weather;
     }
 
+    public function findFromDate(DateTime $date): array
+    {
+        $qb = $this->em->createQueryBuilder();
+
+        $qb->select('w');
+        $prepareStatement = $qb->from('App\Model\Entity\Weather', 'w');
+
+
+        return $prepareStatement
+            ->where('w.date >= :searchDate')
+            ->setParameter('searchDate', $date)
+            ->getQuery()
+            ->getResult();
+
+    }
+
 }
